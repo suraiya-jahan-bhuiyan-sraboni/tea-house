@@ -545,6 +545,9 @@
   .left-4 {
     left: calc(var(--spacing) * 4);
   }
+  .row-span-2 {
+    grid-row: span 2 / span 2;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -565,6 +568,9 @@
   }
   .mx-auto {
     margin-inline: auto;
+  }
+  .my-auto {
+    margin-block: auto;
   }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
@@ -593,6 +599,18 @@
   .table {
     display: table;
   }
+  .h-\[136\] {
+    height: 136;
+  }
+  .h-\[136px\] {
+    height: 136px;
+  }
+  .h-\[140px\] {
+    height: 140px;
+  }
+  .h-\[200px\] {
+    height: 200px;
+  }
   .w-\[90\%\] {
     width: 90%;
   }
@@ -614,8 +632,17 @@
   .resize {
     resize: both;
   }
+  .auto-rows-fr {
+    grid-auto-rows: minmax(0, 1fr);
+  }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
   }
   .items-center {
     align-items: center;
@@ -638,8 +665,14 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
   .rounded-lg {
     border-radius: var(--radius-lg);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
   }
   .border {
     border-style: var(--tw-border-style);
@@ -654,11 +687,21 @@
   .border-white {
     border-color: var(--color-white);
   }
+  .bg-amber-100 {
+    background-color: var(--color-amber-100);
+  }
+  .bg-gray-100 {
+    background-color: var(--color-gray-100);
+  }
   .bg-white {
     background-color: var(--color-white);
   }
   .bg-gradient-to-b {
     --tw-gradient-position: to bottom in oklab,;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+  }
+  .bg-gradient-to-l {
+    --tw-gradient-position: to left in oklab,;
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
   .bg-gradient-to-r {
@@ -677,12 +720,32 @@
     --tw-gradient-from: var(--color-gray-200);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
+  .from-gray-300 {
+    --tw-gradient-from: var(--color-gray-300);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
   .from-orange-500 {
     --tw-gradient-from: var(--color-orange-500);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
+  .from-pink-200 {
+    --tw-gradient-from: var(--color-pink-200);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .from-pink-300 {
+    --tw-gradient-from: var(--color-pink-300);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
   .to-\[\#F00\] {
     --tw-gradient-to: #F00;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .to-gray-100 {
+    --tw-gradient-to: var(--color-gray-100);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .to-pink-100 {
+    --tw-gradient-to: var(--color-pink-100);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .to-white {
@@ -721,6 +784,9 @@
   }
   .text-center {
     text-align: center;
+  }
+  .text-end {
+    text-align: end;
   }
   .font-\[Manrope\] {
     font-family: Manrope;
@@ -911,9 +977,19 @@
       display: flex;
     }
   }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
   .md\:grid-cols-3 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .md\:gap-4 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 4);
     }
   }
   .md\:p-12 {
