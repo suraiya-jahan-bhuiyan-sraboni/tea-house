@@ -761,6 +761,30 @@
     --tw-gradient-from: #FF00001A;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
+  .from-\[\#ff000010\] {
+    --tw-gradient-from: #ff000010;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .from-\[\#ff0000\] {
+    --tw-gradient-from: #ff0000;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .from-\[\#ff0000ba\] {
+    --tw-gradient-from: #ff0000ba;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .from-\[\#ff000\] {
+    --tw-gradient-from: #ff000;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .from-\[\#ff\] {
+    --tw-gradient-from: #ff;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .from-\[red-100\] {
+    --tw-gradient-from: red-100;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
   .from-amber-400 {
     --tw-gradient-from: var(--color-amber-400);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -1091,6 +1115,11 @@
       font-size: 2.5rem;
     }
   }
+  .lg\:left-8 {
+    @media (width >= 64rem) {
+      left: calc(var(--spacing) * 8);
+    }
+  }
   .lg\:left-16 {
     @media (width >= 64rem) {
       left: calc(var(--spacing) * 16);
@@ -1144,6 +1173,31 @@
   .lg\:py-3 {
     @media (width >= 64rem) {
       padding-block: calc(var(--spacing) * 3);
+    }
+  }
+  .xl\:left-3 {
+    @media (width >= 80rem) {
+      left: calc(var(--spacing) * 3);
+    }
+  }
+  .xl\:left-16 {
+    @media (width >= 80rem) {
+      left: calc(var(--spacing) * 16);
+    }
+  }
+  .xl\:left-20 {
+    @media (width >= 80rem) {
+      left: calc(var(--spacing) * 20);
+    }
+  }
+  .xl\:left-26 {
+    @media (width >= 80rem) {
+      left: calc(var(--spacing) * 26);
+    }
+  }
+  .xl\:left-30 {
+    @media (width >= 80rem) {
+      left: calc(var(--spacing) * 30);
     }
   }
   .xl\:left-40 {
